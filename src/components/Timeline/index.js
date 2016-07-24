@@ -6,8 +6,7 @@ import VenueListItem from '../VenuesList/components/VenueListItem/index';
 import style from './style.scss';
 
 const Timeline = (props) => (
-
-  <div>
+  <div className="container">
     <ul className="timeline">
       {props.items.map(item =>
         <TimelineItem

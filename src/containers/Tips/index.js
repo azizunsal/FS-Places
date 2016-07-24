@@ -27,9 +27,7 @@ class TipsContainer extends React.Component {
 
   render() {
     return(
-      <div className='container'>
-        <Timeline items={this.state.tips} />
-      </div>
+      <Timeline items={this.state.tips} />
     );
   }
 }

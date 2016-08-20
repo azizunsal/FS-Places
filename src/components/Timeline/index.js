@@ -1,21 +1,15 @@
 import React from 'react';
-import TimelineItem from './components/TimelineItem/index';
-import VenueListItem from '../VenuesList/components/VenueListItem/index';
-// '/Users/azizunsal/projects/reactjs/FS-Places/src/components'
+import Config from '../../config/Config';
+import TimelineItems from './components/TimelineItems/index';
+import {connect} from 'react-redux';
 
-import style from './style.scss';
+const TipsContainer = (props) => <TimelineItems items={props.tips} />;
 
-const Timeline = (props) => (
-  <div className="container">
-    <ul className="timeline">
-      {props.items.map(item =>
-        <TimelineItem
-          key={item.id}
-          item={item}
-        />
-      )}
-    </ul>
-  </div>
-);
+const mapStateToProps = (state, ownProps) => {
+  return {
+    venueId: ownProps.venueId,
+    tips: state.venues.tips
+  };
+}
 
-export default Timeline;
+export default connect(mapStateToProps)(TipsContainer);

@@ -1,6 +1,11 @@
+var Dashboard = require('webpack-dashboard');
+var DashboardPlugin = require('webpack-dashboard/plugin');
+var dashboard = new Dashboard();
+
 let path = require('path');
 const src = path.join(__dirname, './src');
 const dist = path.join(__dirname, './dist');
+
 
 module.exports = {
 	context: src,
@@ -14,12 +19,13 @@ module.exports = {
 		publicPath: '/public/',
 		filename: 'main.min.js'
 	},
-
+  // devtool: 'eval-source-map',
 	devServer: {
 		contentBase: dist,
 		inline: true,
 		port: 2222,
-		hot: true
+		hot: true,
+    quiet: true
 	},
 	module: {
 		loaders: [
@@ -37,5 +43,8 @@ module.exports = {
 				loaders: ['style', 'css', 'sass']
 			}
 		]
-	}
+	},
+  plugins: [
+    new DashboardPlugin(dashboard.setData)
+  ]
 };

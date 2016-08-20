@@ -1,18 +1,17 @@
 import React from 'react';
-import VenuesContainer from '../../containers/Venues/index';
-import AutoCompleteInput from '../../components/AutoCompleteInput/index';
+import VenuesContainer from '../../components/Venues/index';
 import Button from '../../components/Button/index';
-
-import { browserHistory } from 'react-router';
-
+import {browserHistory} from 'react-router';
 import styles from './style.scss';
 
 class VenuesListScene extends React.Component {
   constructor(props) {
     super(props);
+    console.log("[VenuesListScene] props ", props);
   }
 
   render() {
+    console.log("[VenuesListScene] render");
     return(
       <div className='container'>
         <div className="row">

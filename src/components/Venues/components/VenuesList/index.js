@@ -1,9 +1,9 @@
 import React from 'react';
-import $ from 'jquery';
 import styles from './style.scss';
 import VenueListItem from './components/VenueListItem/index';
 
 const VenuesList = (props) => {
+  console.log("[VenuesList] - props ", props);
   return (
     <div className="row">
       {props.venues.map((item) => (

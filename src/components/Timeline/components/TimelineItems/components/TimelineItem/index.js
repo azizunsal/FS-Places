@@ -8,7 +8,7 @@ const TimelineItem = ({item}) => (
     </div>
     <div className="timeline-panel">
       <div className="timeline-heading">
-        <h5 className="timeline-title">{item.user.firstName + item.user.lastName}<small>{new Date(item.createdAt).toTimeString()}</small></h5>
+        <h5 className="timeline-title">{item.user.firstName + " " + item.user.lastName}<small>{" " + new Date(item.createdAt).toTimeString()}</small></h5>
       </div>
 
       <div className="timeline-body">
@@ -29,3 +29,6 @@ const TimelineItem = ({item}) => (
 );
 
 export default TimelineItem;
+
+// TODO(azizunsal): Timeline component'inde bir Contaoner component olacaksa o bu component olabilir. Eger buradaki butonlar
+// islevsel hale getirilirse, simdilik gerek yok gibi duruyor.

@@ -29,6 +29,3 @@ const TimelineItem = ({item}) => (
 );
 
 export default TimelineItem;
-
-// TODO(azizunsal): Timeline component'inde bir Contaoner component olacaksa o bu component olabilir. Eger buradaki butonlar
-// islevsel hale getirilirse, simdilik gerek yok gibi duruyor.

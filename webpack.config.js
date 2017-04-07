@@ -4,7 +4,7 @@ var dashboard = new Dashboard();
 
 let path = require('path');
 const src = path.join(__dirname, './src');
-const dist = path.join(__dirname, './dist');
+const dist = path.join(__dirname, './docs');
 
 
 module.exports = {

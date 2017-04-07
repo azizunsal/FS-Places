@@ -16,7 +16,7 @@ module.exports = {
 	],
 	output: {
 		path: dist,
-		publicPath: 'docs/',
+		publicPath: '',
 		filename: 'main.min.js'
 	},
   // devtool: 'eval-source-map',

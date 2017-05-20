@@ -1,8 +1,8 @@
 
 const Config = {
   FourSquare : {
-    clientId: '<your client id>',
-    clientSecret: '<your client secret>',
+    clientId: 'HH2HDSQXDWPGCDO5UOJLTUXPJR4E4O3HATDOADU4RFZ01DRR',
+    clientSecret: 'TR3I2EQXN5WZDEXAVJQTVJ22CUOI3T5TG0JYA3AHZJDAXCIT',
     apiUrl: 'https://api.foursquare.com/',
     limit: 30,
     section: {
@@ -20,7 +20,7 @@ const Config = {
     }
   },
   Mapbox: {
-    accessToken: '<your access token>'
+    accessToken: 'pk.eyJ1IjoiYXppenVuc2FsIiwiYSI6ImNpcTgyMGZ2eDAwMzFocmtxbWlmcHVkejYifQ.VZoOABamLIV3Q9530qxaUw'
   }
 
 };

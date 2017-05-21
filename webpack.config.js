@@ -6,8 +6,8 @@ const dist = path.join(__dirname, './docs');
 module.exports = {
 	context: src,
 	entry: [
-		'webpack-dev-server/client?http://localhost:2222',
-   		'webpack/hot/only-dev-server',
+		// 'webpack-dev-server/client?http://localhost:2222',
+   		// 'webpack/hot/only-dev-server',
    		src + '/index.js'
 	],
 	output: {
@@ -16,13 +16,13 @@ module.exports = {
 		filename: 'main.min.js'
 	},
   // devtool: 'eval-source-map',
-	devServer: {
-		contentBase: dist,
-		inline: true,
-		port: 2222,
-		hot: true,
-    quiet: true
-	},
+	// devServer: {
+	// 	contentBase: dist,
+	// 	inline: true,
+	// 	port: 2222,
+	// 	hot: true,
+    // quiet: true
+	// },
 	module: {
 		loaders: [
 			{

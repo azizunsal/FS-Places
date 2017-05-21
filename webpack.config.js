@@ -1,7 +1,3 @@
-var Dashboard = require('webpack-dashboard');
-var DashboardPlugin = require('webpack-dashboard/plugin');
-var dashboard = new Dashboard();
-
 let path = require('path');
 const src = path.join(__dirname, './src');
 const dist = path.join(__dirname, './docs');
@@ -43,8 +39,5 @@ module.exports = {
 				loaders: ['style', 'css', 'sass']
 			}
 		]
-	},
-  plugins: [
-    new DashboardPlugin(dashboard.setData)
-  ]
+	}
 };

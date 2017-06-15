@@ -1,3 +1,4 @@
+'use strict';
 let path = require('path');
 const src = path.join(__dirname, './src');
 const dist = path.join(__dirname, './docs');
@@ -6,10 +7,10 @@ module.exports = {
 	context: src,
 	entry: [
 		// The script refreshing the browser on none hot updates
-		'webpack-dev-server/client?http://localhost:2222',
+		// 'webpack-dev-server/client?http://localhost:2222',
 
 		 // For hot style updates
-   		'webpack/hot/only-dev-server',
+   		// 'webpack/hot/only-dev-server',
 
 		// and the application
    		src + '/index.js'
@@ -17,8 +18,9 @@ module.exports = {
 	output: {
 		path: dist,
 		publicPath: '',
-		filename: 'main.min.js'
+		filename: 'prod.bundle.js'
 	},
+
 	devtool: 'eval-source-map',
 	devServer: {
 		contentBase: dist,

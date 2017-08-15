@@ -1,5 +1,5 @@
 /node_modules
 /**/Config.js
-dist/
+dist/bundle.js
 .nmp-debug.log
 .vscode/

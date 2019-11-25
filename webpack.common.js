@@ -1,7 +1,6 @@
 let path = require('path');
 const src = path.join(__dirname, './src');
-const dist = path.join(__dirname, './dist');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: src,
@@ -39,5 +38,17 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'A basic Four Square Places Implementation with Webpack, React and Redux.',
+            template: './index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: false
+            }
+        })
+    ]
 };

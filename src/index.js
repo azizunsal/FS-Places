@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRouter from './router/AppRouter';
+import AppRouter from './app/router/AppRouter';
 
-import configureStore from './store/configureStore';
+import configureStore from './app/store/configureStore';
 import { Provider } from 'react-redux';
 
 const store = configureStore();

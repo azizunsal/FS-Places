@@ -1,9 +1,15 @@
-const Merge = require('webpack-merge');
-const CommonConfig = require('./webpack.common.js');
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
 
-module.exports = Merge(CommonConfig, {
+console.log("process.env.NODE_ENV => ", process.env.NODE_ENV);
+
+module.exports = merge(common, {
+    stats: 'errors-warnings',
+    mode: 'development',
     devtool: 'inline-source-map',
-	devServer: {
-		contentBase: './dist'
-	},
+    devServer: {
+/*         contentBase: path.join(__dirname, 'dist'),
+        compress: true, */
+        port: 9000
+      }
 });

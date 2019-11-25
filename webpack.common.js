@@ -1,13 +1,14 @@
 let path = require('path');
 const src = path.join(__dirname, './src');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: src,
     entry: src + '/index.js',
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
 
     module: {
@@ -41,9 +42,11 @@ module.exports = {
     },
 
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'A basic Four Square Places Implementation with Webpack, React and Redux.',
-            template: './index.html',
+            template: path.resolve(src, 'index.html'),
+            filename: "index.html",
             inject: true,
             minify: {
                 removeComments: true,

@@ -2,7 +2,7 @@ import React from 'react';
 import AutoCompleteResults from './components/AutoCompleteInputResult/index';
 
 const AutoCompleteInput = (props) => {
-  return(
+  return (
     <div className="row">
       <input
         onKeyDown={props.handleMove}
@@ -11,7 +11,7 @@ const AutoCompleteInput = (props) => {
         placeholder="Search"
         onChange={props.handleChange}
       />
-      <span className='locationReset'/>
+      <span className='locationReset' />
       <AutoCompleteResults
         searchText={props.searchText}
         items={props.items}

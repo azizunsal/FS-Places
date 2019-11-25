@@ -1,9 +1,8 @@
 import fetch from 'isomorphic-fetch';
-import Config from '../../config/Config';
 import * as actions from './constants';
-import {browserHistory} from 'react-router';
+import { browserHistory } from 'react-router';
 
-import {fetchVenues} from '../../components/Venues/actions';
+import { fetchVenues } from '../../components/Venues/actions';
 
 /**
  * sync actions
@@ -53,23 +52,23 @@ export function disposeSearchResults() {
 /**
  * Async actions, via thunk middleware.
  */
- export function fetchPlaces(searchText) {
-   return dispatch => {
-     dispatch(requestSearch(searchText));
-     return fetch(
-       `https://api.mapbox.com/geocoding/v5/mapbox.places/${searchText}.json?access_token=pk.eyJ1IjoiYXppenVuc2FsIiwiYSI6ImNpcTgyMGZ2eDAwMzFocmtxbWlmcHVkejYifQ.VZoOABamLIV3Q9530qxaUw`
-     )
-     .then(response => response.json())
-     .then(matchedItems => matchedItems.features)
-     .then(matchedItems => dispatch(searchSucceeded(searchText, matchedItems)))
-   };
- }
+export function fetchPlaces(searchText) {
+  return dispatch => {
+    dispatch(requestSearch(searchText));
+    return fetch(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${searchText}.json?access_token=pk.eyJ1IjoiYXppenVuc2FsIiwiYSI6ImNpcTgyMGZ2eDAwMzFocmtxbWlmcHVkejYifQ.VZoOABamLIV3Q9530qxaUw`
+    )
+      .then(response => response.json())
+      .then(matchedItems => matchedItems.features)
+      .then(matchedItems => dispatch(searchSucceeded(searchText, matchedItems)))
+  };
+}
 
 export function itemSelected(selectedItem) {
   const ll = getLL(selectedItem);
   return dispatch => {
     dispatch(_itemSelected(selectedItem));
-    return dispatch(fetchVenues(ll)).then( ()=> {
+    return dispatch(fetchVenues(ll)).then(() => {
       console.warn("oki venues fetched now it is time for routing!");
       dispatch(routeToVenuesList(ll));
     });
@@ -87,8 +86,8 @@ function getLL(selectedItem) {
   return encodedLL;
 }
 
- function routeToVenuesList(ll) {
-   return dispatch => {
-     browserHistory.push(`/ll/${ll}/venues`);
-   };
- }
+function routeToVenuesList(ll) {
+  return dispatch => {
+    browserHistory.push(`/ll/${ll}/venues`);
+  };
+}

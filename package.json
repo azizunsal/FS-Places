@@ -10,8 +10,12 @@
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aziz Unsal <unsal.aziz@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azizunsal/FS-Places/issues"
+  },
+  "homepage": "https://github.com/azizunsal/FS-Places/#readme",
   "dependencies": {
     "@babel/runtime": "^7.7.4",
     "jquery": "^3.4.1",

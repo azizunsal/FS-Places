@@ -9,4 +9,4 @@ insert_final_newline = true
 indent_size = 2
 
 [*.md]
-trim_trailing_whitespace = falseß
+trim_trailing_whitespace = false

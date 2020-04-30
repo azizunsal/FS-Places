@@ -18,7 +18,7 @@
   "homepage": "https://github.com/azizunsal/FS-Places/#readme",
   "dependencies": {
     "@babel/runtime": "^7.7.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mapbox": "^1.0.0-beta9",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",

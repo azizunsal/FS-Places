@@ -28,7 +28,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "throttle-debounce": "^1.1.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
